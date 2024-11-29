@@ -1,9 +1,21 @@
 "use strict";
 
-a = 15;
-console.log(a);
+const numberOfFilms = +prompt('Skolko filmov vi uje posmotreli?', '');
 
-let number = 5;
-const leftBorderWidth = 1;
-number = 10;
-console.log(number);
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors:{},
+    genres: [],
+    privat: false
+};
+
+const a = prompt("odin iz poslednix prosmotrenix filmov?", ''),
+      b = prompt('ocenka?', ''),
+      c = prompt("odin iz poslednix prosmotrenix filmov?", ''),
+      d = prompt('ocenka?', '');
+
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
+
+console.log(personalMovieDB);
